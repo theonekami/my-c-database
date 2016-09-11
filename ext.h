@@ -1,4 +1,5 @@
-#ifndef
+#ifndef _EXT_H_INCLUDED
+#define _EXT_H_INCLUDED
 #include "KEV.h"
 
 class ext
@@ -28,3 +29,4 @@ int hpof(ext a)
 char* nameof(ext a)
 {return retname();
 }
+#endif 
