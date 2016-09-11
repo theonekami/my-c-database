@@ -1,0 +1,10 @@
+#include "KEV.h"
+#include "MAP.h"
+void main()
+{
+clrscr();
+genmap (2,8);
+a.map_spwn('K');
+a.disp();
+getch();
+}
