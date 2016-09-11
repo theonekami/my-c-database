@@ -8,6 +8,7 @@ class genmap
   protected:
   int sizeX,sizeY;
   char map[50][50];
+  char BX,BY;
   public:
     genmap(int x,int y,char X='_',char Y='|');
     void disp();
@@ -20,7 +21,8 @@ genmap::genmap(int x,int y,char X,char Y)
   {
     sizeX=x;
     sizeY=y*2;
-
+    BX=X;
+    BY=Y;
     for (int i=0;i<sizeX;i++)
        {
 	 if(i==0||i==sizeX-1)
@@ -60,7 +62,9 @@ void genmap::map_spwn(char a)
 	 randomize();
 	 i=random(sizeX);
 	 j=random(sizeY);
-	}while(map[i][j]=='|'||map[i][j]=='_');
+      /*	 cout<<map[i][j];
+	 getch();  errorr detection */
+	}while(map[i][j]==BX||map[i][j]==BY);
 	map[i][j]=a;
        }
 
